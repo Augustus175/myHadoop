@@ -49,7 +49,8 @@ public class HdfsExample {
     public static void main(String[] args) {
         try {
             String path = "hdfs:master:50070/test/mkdir-test";
-            testDeletePath(path);
+            testMkdirPath(path);
+//            testDeletePath(path);
         }catch (Exception e){
             System.out.println("Exceptions : "+e);
         }
