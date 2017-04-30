@@ -19,32 +19,34 @@ import java.util.StringTokenizer;
 /**
  * Created by zhangzhibo on 17-4-27.
  */
-class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
-    private final static IntWritable one = new IntWritable(1);
-    private Text word = new Text();
 
-    public void map(Object key, Text vaule, Context context) throws IOException, InterruptedException {
-        StringTokenizer itr = new StringTokenizer(vaule.toString());
-        while(itr.hasMoreTokens()){
-            word.set(itr.nextToken());
-            context.write(word,one);
-        }
-    }
-}
-class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable>{
-    private IntWritable resault = new IntWritable();
-    public void reduce(Text key,Iterable<IntWritable> values,Context contest)throws IOException,InterruptedException
-    {
-        int sum = 0;
-        for (IntWritable val : values) {
-            sum += val.get();
-        }
-        resault.set(sum);
-        contest.write(key,resault);
-    }
-}
+
 
 public class WordCount {
+    public static class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
+        private final static IntWritable one = new IntWritable(1);
+        private Text word = new Text();
+
+        public void map(Object key, Text vaule, Context context) throws IOException, InterruptedException {
+            StringTokenizer itr = new StringTokenizer(vaule.toString());
+            while(itr.hasMoreTokens()){
+                word.set(itr.nextToken());
+                context.write(word,one);
+            }
+        }
+    }
+    public static class IntSumReducer extends Reducer<Text,IntWritable,Text,IntWritable>{
+        private IntWritable resault = new IntWritable();
+        public void reduce(Text key,Iterable<IntWritable> values,Context contest)throws IOException,InterruptedException
+        {
+            int sum = 0;
+            for (IntWritable val : values) {
+                sum += val.get();
+            }
+            resault.set(sum);
+            contest.write(key,resault);
+        }
+    }
     public static void main(String[] args) throws Exception {
 //        TokenizerMapper tokenizermapper = new TokenizerMapper();
 //        IntSumReducer intsumreducer = new IntSumReducer();
