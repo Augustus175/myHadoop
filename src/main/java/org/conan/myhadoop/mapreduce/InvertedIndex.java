@@ -1,4 +1,5 @@
 package org.conan.myhadoop.mapreduce;
+// org.conan.myhadoop.mapreduce.InvertedIndex
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
