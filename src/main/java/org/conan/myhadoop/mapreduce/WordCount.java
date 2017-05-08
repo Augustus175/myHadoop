@@ -15,7 +15,6 @@ import org.apache.hadoop.util.GenericOptionsParser;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-
 /**
  * Created by zhangzhibo on 17-4-27.
  */
@@ -43,7 +42,7 @@ public class WordCount {
         public void reduce(Text key, Iterable<IntWritable> values, Context context)
                 throws IOException, InterruptedException {
             int sum = 0;
-            for (IntWritable val : values) {
+            for (IntWritable val : values){
                 sum += val.get();
             }
             result.set(sum);
