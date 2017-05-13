@@ -1,4 +1,4 @@
-package org.conan.myhadoop.HadoopDefinitiveGuide;
+package org.conan.myhadoop.HadoopDefinitiveGuide.chap03;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;

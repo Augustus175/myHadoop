@@ -1,6 +1,4 @@
-package org.conan.myhadoop.HadoopDefinitiveGuide;
-//package org.conan.myhadoop.HadoopDefinitiveGuide.MaxTemperature
-
+package org.conan.myhadoop.HadoopDefinitiveGuide.chap02;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -9,9 +7,6 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-/**
- * Created by zhangzhibo on 17-5-4.
- */
 
 public class MaxTemperature {
     public static void main(String[] args) throws Exception {
@@ -30,6 +25,6 @@ public class MaxTemperature {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
-        System.exit(job.waitForCompletion(true) ? 0: 1);
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }

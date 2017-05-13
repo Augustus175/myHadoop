@@ -1,4 +1,4 @@
-package org.conan.myhadoop.HadoopDefinitiveGuide;
+package org.conan.myhadoop.HadoopDefinitiveGuide.chap02;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
