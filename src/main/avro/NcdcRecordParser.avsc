@@ -1,0 +1,12 @@
+{
+ "namespace": "org.conan.myhadoop.HadoopDefinitiveGuide.chap04",
+ "type": "record",
+ "name": "WeatherRecord",
+ "doc" : "A weather reading",
+ "fields": [
+     {"name": "year", "type": "int"},
+     {"name": "temperature", "type": "int"},
+     {"name": "stationID", "type": "string"}
+ ]
+}
+
