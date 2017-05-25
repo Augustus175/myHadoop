@@ -1,4 +1,5 @@
 package org.conan.myhadoop.HadoopDefinitiveGuide.chap04;
+//org.conan.myhadoop.HadoopDefinitiveGuide.chap04.AvroGenericMaxTemperature;
 
 
 import java.io.IOException;
@@ -185,7 +186,9 @@ public class AvroGenericMaxTemperature extends Configured implements Tool {
         FileOutputFormat.setOutputPath(conf, new Path(args[1]));
 
         AvroJob.setInputSchema(conf, Schema.create(Schema.Type.STRING));
+        AvroJob.setMapOutputSchema(conf,Pair.getPairSchema(Schema.create(Schema.Type.INT), SCHEMA));
         AvroJob.setMapOutputSchema(conf, SCHEMA);
+
         conf.setInputFormat(AvroUtf8InputFormat.class);
 
         AvroJob.setMapperClass(conf, MaxTemperatureMapper.class);
