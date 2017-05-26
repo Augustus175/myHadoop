@@ -1,4 +1,5 @@
 package org.conan.myhadoop.HadoopDefinitiveGuide.chap02;
+// org.conan.myhadoop.HadoopDefinitiveGuide.chap02.MaxTemperature
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
