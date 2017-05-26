@@ -138,7 +138,7 @@
     <orderEntry type="library" name="Maven: org.apache.avro:avro-compiler:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.velocity:velocity:1.7" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.avro:avro-mapred:hadoop2:1.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.avro:avro-mapred:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.avro:avro-ipc:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.mortbay.jetty:servlet-api:2.5-20081211" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
